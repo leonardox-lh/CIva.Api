@@ -1,7 +1,5 @@
 package civa.shared.seed;
 
-import civa.security.model.dto.request.RegisterRequestDto;
-import civa.security.service.IAuthService;
 import civa.user.model.entity.User;
 import civa.user.repository.IUserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
