@@ -41,8 +41,8 @@ public class AuthController {
 
     @Operation(summary = "Registra una nueva empresa")
     @PostMapping("/register")
-    public ResponseEntity<ApiResponse<RegisterUserResponseDto>> registerCompany(@Valid @RequestBody RegisterRequestDto request) {
-        var res = service.registerCompany(request);
+    public ResponseEntity<ApiResponse<RegisterUserResponseDto>> registerUser(@Valid @RequestBody RegisterRequestDto request) {
+        var res = service.registerUser(request);
         return new ResponseEntity<>(res, HttpStatus.CREATED);
     }
 }

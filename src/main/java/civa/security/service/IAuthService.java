@@ -15,7 +15,7 @@ public interface IAuthService {
      * @param request Datos para el registro
      * @return Usuario registrado
      */
-    ApiResponse<RegisterUserResponseDto> registerCompany(RegisterRequestDto request);
+    ApiResponse<RegisterUserResponseDto> registerUser(RegisterRequestDto request);
 
     /**
      * Realiza el login del usuario

@@ -22,17 +22,10 @@ public class BusController {
         this.busService = busService;
     }
 
-    // URL: http://localhost:8080/api/v1/bus
-    @Operation(summary = "Obtiene todos los buses")
-    @GetMapping("/bus")
-    public ResponseEntity<ApiResponse<List<BusResponseDto>>> getBuses() {
-        var res = busService.getBuses();
-        return new ResponseEntity<>(res, HttpStatus.OK);
-    }
 
-    // URL: http://localhost:8080/api/v1/buses
+    // URL: http://localhost:8080/api/v1/bus
     @Operation(summary = "Obtiene los buses paginados")
-    @GetMapping("/buses")
+    @GetMapping("/bus")
     public ResponseEntity<Page<BusResponseDto>> getBuses(@RequestParam int page, @RequestParam int size) {
         var res = busService.getBuses(page, size);
         return new ResponseEntity<>(res, HttpStatus.OK);
