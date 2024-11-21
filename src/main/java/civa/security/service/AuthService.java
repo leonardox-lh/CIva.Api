@@ -45,7 +45,7 @@ public class AuthService implements IAuthService {
     }
 
     @Override
-    public ApiResponse<RegisterUserResponseDto> registerCompany(RegisterRequestDto request) {
+    public ApiResponse<RegisterUserResponseDto> registerUser(RegisterRequestDto request) {
         if (userRepository.existsByName(request.getName())) {
             throw new CustomException(HttpStatus.CONFLICT, "El name '" + request.getName() + "' ya está registrado");
         }
